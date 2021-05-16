@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>TeaWebsite</title>
+    <style>
+         
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container {
+            background: rgb(255,229,229);
+            background: linear-gradient(90deg, rgba(255,229,229,1) 100%, rgba(74,55,55,1) 100%, rgba(252,176,69,1) 100%, rgba(131,58,180,1) 100%);
+            display: flex;
+        }
+
+      
+
+        #container div.nav {
+            padding: 40px;
+            flex-basis: 100%;
+            }
+
+        li{
+            display: flex;
+            justify-content:space-around;
+         }
+         .link{
+             font-size: 30px;
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            font-family:'Roboto', 'sans-serif';
+            
+        }
+
+        .link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #000;
+            transition: width .3s;
+          }
+
+            .link:hover::after {
+            width: 100%;
+    
+        }
+        /* ------------------------- */
+        div.bgc {
+            background-image: linear-gradient(180deg,
+             rgba(0,0,0,0.2) 0%
+            ,rgba(0,0,0,0.8)100%),
+            url("https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1347&q=80");
+            background-size: cover;
+            height: 500px;
+            position: relative;
+        }
+        div div.sub{
+           
+            position: absolute;
+            color: whitesmoke;
+            font-size: 60px;
+            font-family:  Roboto, sans-serif;
+            animation: slideMe;
+            top: 0;
+            left: 80%;
+            animation-duration: 8s;
+            animation-iteration-count: 1;
+            visibility: hidden;
+            
+        }
+
+        div div.oclock{
+            
+            position: absolute;
+            color: whitesmoke;
+            font-size: 60px;
+            font-family:  Roboto, sans-serif;
+            animation: slideOc;
+            top: 80%;
+            left: 80%;
+            animation-duration: 10s;
+            animation-iteration-count: 1;
+            animation-delay: 3s;
+            visibility: hidden;
+        }
+        /* Animation */
+        @keyframes slideMe {
+            0% {
+                visibility: visible;
+                top:  0;
+                left: 0; 
+            }
+            100% {
+                left: 80%
+            }
+        }
+
+        @keyframes slideOc {
+            0% {
+                visibility: visible;
+                top:  80%;
+                left: 70%; 
+            }
+            100% {
+                left: 0;
+                
+            }
+        }
+        /* section */
+        #section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #section div.about {
+            height: 100px;
+           flex-basis: 50%;
+          
+        }
+
+        #section div.about.one {
+            background-image: linear-gradient(180deg,
+             rgba(0,0,0,0.2) 0%
+            ,rgba(0,0,0,0.8)100%),
+            url("https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+            background-size: cover;
+            height: 500px;
+            text-align: center;
+            
+        }
+        #section div.about.one > h1,p {
+            font-family:  Roboto, sans-serif;
+            padding: 10px 100px;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+        #section div.about.two {
+            text-align: center;
+            background-image: linear-gradient(180deg,
+             rgba(0,0,0,0.2) 0%
+            ,rgba(0,0,0,0.8)100%),
+            url("https://images.unsplash.com/photo-1547825407-2d060104b7f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+            background-size: cover;
+            height: 500px;
+        
+        }
+        #section div.about.two > h1,p {
+            font-family:  Roboto, sans-serif;
+            padding: 10px 100px;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+
+        #section div.about.theree {
+            text-align: center;
+            background-image: linear-gradient(180deg,
+             rgba(0,0,0,0.2) 0%
+            ,rgba(0,0,0,0.8)100%),
+            url("https://images.unsplash.com/photo-1522747776116-64ee03be1dad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80");
+            background-size: cover;
+            height: 500px;
+            
+
+            
+        }
+
+        #section div.about.theree > h1 {
+            margin-top: 20px;
+            font-size: 50px;
+            color: whitesmoke;
+            font-family:  Roboto, sans-serif;
+            padding: 10px 100px;
+            bottom: 0;
+            left: 30px;
+            
+        }
+
+        #section div.about.theree > p {
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+
+        #section div.about.four {
+            text-align: center;
+            background-image: linear-gradient(180deg,
+             rgba(0,0,0,0.2) 0%
+            ,rgba(0,0,0,0.8)100%),
+            url("https://images.unsplash.com/photo-1561296180-e8100fd714e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1405&q=80");
+            background-size: cover;
+            height: 500px;
+          
+        }
+
+        #section div.about.four > h1 {
+            margin-top: 20px;
+            font-size: 50px;
+            color: whitesmoke;
+            font-family:  Roboto, sans-serif;
+            padding: 10px 100px;
+            bottom: 0;
+            left: 30px;
+         
+            
+        }
+
+        #section div.about.four > p {
+            display: inline-block;
+            margin-top: 50px;
+        }
+        /*  footer */
+        div.footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            color: whitesmoke;
+        }
+
+        @media (max-width: 640px) {
+         li{
+            display: flex;
+            flex-wrap: wrap;
+             }
+        a{
+            text-align: center;
+        
+        flex-basis: 100%;
+        font-family:'Roboto', 'sans-serif';
+        }
+        div.bgc {
+            background-size: cover;
+            height: 300px;
+        }
+        div div.sub{
+            font-size: 20px;
+            font-family:  Roboto, sans-serif;
+            animation: slideMe;
+            top: 0;
+            left: 60%;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            visibility: hidden;
+            
+        }
+
+        div div.oclock{
+            font-size: 20px;
+            font-family:  Roboto, sans-serif;
+            animation: slideOc;
+            top: 70%;
+            left: 40%;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-delay: 3s;
+            visibility: hidden;
+        }
+        /* Animation */
+        @keyframes slideMe {
+            0% {
+                visibility: visible;
+                top: 10% ;
+                left: 10%; 
+            }
+            25%{
+                font-size: 30px;
+            }
+            50% {
+                font-size: 20px;
+            }
+
+            75% {
+                font-size: 30px;
+            }
+            100% {
+                top: 10%;
+                left: 10%
+            }
+        }
+
+        @keyframes slideOc {
+            0% {
+                visibility: visible;
+                top: 70%;
+                left: 40%;
+            }
+            25%{
+                font-size: 30px;
+            }
+            50% {
+                font-size: 20px;
+            }
+
+            75% {
+                font-size: 30px;
+            }
+            100% {
+                top: 70%;
+                left: 40%;
+            }
+        }
+        /* ----------------- */
+        #section {
+            flex-wrap: wrap;
+        }
+
+        #section div.about {
+           flex-basis: 100%;
+          
+        }
+            
+
+        #section div.about.one {
+            height: 400px;
+            text-align: center;
+            
+        }
+         
+        #section div.about.one h1,p {
+            font-family:  Roboto, sans-serif;
+            padding: 10px 20px;
+            margin-top: 10px;
+            color: whitesmoke;
+        }
+
+        #section div.about.two {
+            height: 400px;
+        
+        }
+        #section div.about.theree {
+           height: 400px;  
+        }
+
+        #section div.about.theree > h1 {
+            margin-top: 30px;
+            font-size: 30px;
+            padding: 10px 50px;
+        }
+        #section div.about.four {
+           
+            height: 400px;
+          
+        }
+    #section div.about.four > h1 {
+            margin-top: 20px;
+            font-size: 30px;
+           
+            padding: 10px 30px;
+            bottom: 0;
+            left: 30px;
+         
+            
+        }
+
+       
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="nav">
+            <ul>
+                <li>
+                    <a class="link" href="">Tea</a>
+                    <a class="link" href="">Info</a>
+                    <a class="link" href="">Contact us</a>
+                    <a class="link" href="">Join us</a>
+                </li>
+            </ul>
+        </div>
+</div>
+<div class="bgc">
+    <div class="sub">
+        Time to Tea !
+    </div>
+    <div class="oclock">
+       It's 5 o'clock !
+    </div>
+</div>
+<div id="section">
+<div class="about one">
+    <h1>The best tea in the world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At minima, dolores corrupti exercitationem itaque vero eligendi nulla? Velit omnis nemo sint quasi. Quia reprehenderit quaerat porro impedit temporibus molestiae obcaecati?</p>
+</div>
+<div class="about two" >
+    <h1>The Land of Tea</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias aspernatur tempore ut architecto ad, aliquam labore? Placeat nesciunt, laborum, harum voluptates, laudantium earum reiciendis nam voluptate neque officia corrupti architecto.</p>
+</div>
+<div class="about theree">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui dignissimos dicta magnam laborum itaque corporis vero commodi reprehenderit fugit repudiandae facere esse, assumenda aperiam consequuntur? Quia ipsam eaque qui quam!</p>
+    <h1>Only natural crops</h1>
+</div>
+<div class="about four" >
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia iste earum minima qui numquam debitis, vel, eveniet ad dolorem consequuntur nesciunt doloremque, vero ex rem maxime pariatur nulla itaque voluptatibus.</p>
+    <h1>Various types of tea</h1>
+</div>
+</div>
+<div class="footer">
+    Created by Selim Pł.
+</div>
+</body>
+</html>
